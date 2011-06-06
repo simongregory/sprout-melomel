@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.homepage                  = 'http://melomel.info'
   s.summary                   = 'Melomel is an API for accessing ActionScript objects from external languages.'
   s.description               = 'Project Sprouts support for Melomel.'
-  s.executables               = ['melomel-air', 'melomel-flex']
+  s.executables               = ['melomel-as3', 'melomel-air', 'melomel-flex']
   s.post_install_message      = File.read 'POSTINSTALL.rdoc'
   s.required_rubygems_version = ">= 1.3.7"
   s.require_path              = ['lib']

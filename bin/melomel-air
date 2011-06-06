@@ -7,30 +7,8 @@ generator = Melomel::AIRGenerator.new
 generator.parse! ARGV
 generator.execute
 
-puts <<EOF
-
-# These days the robots are just not up to scratch... so you need to manually make 
-# these edits
-
-## Gemfile
-gem 'sproutmelomel', '>= 0.6.7.pre'
-gem 'rspec',  '~> 2.3.0'
-gem 'cucumber',  '~> 0.8.5'
-gem 'melomel',  '~> 0.6.1'
-
-## Application.mxml
-# Add the melomel namespace to your application:
-xmlns:m="library://melomel/2010"
-
-# Then include the bridge with:
-<m:Melomel/>
-
-## Rakefile
-# Reference the libraries using
-library :melomel, :swc
-library :melomel, :stub
-
-# Add library references to the (a)mxlc task(s)
-t.library_path << 'lib/melomel/melomel-0.6.7.swc'
-
-EOF
+puts ''
+puts '# These days the robots are just not up to scratch...'
+puts '# so you need to manually edit a few things.'
+puts ''
+puts File.read File.dirname(__FILE__) + '/../POSTINSTALL.rdoc'

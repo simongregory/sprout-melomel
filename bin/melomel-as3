@@ -7,13 +7,6 @@ generator = Melomel::FlexGenerator.new
 generator.parse! ARGV
 generator.execute
 
-# May be possilbe to automatically amend with something like:
-#
-# gemfile = File.open('Gemfile', 'a+')
-# gemfile.write("gem 'cucumber',  '~> 0.8.5'") unless gemfile =~ /gem 'cucumber'/
-#
-# But for now lets just go with:
-
 puts ''
 puts '# These days the robots are just not up to scratch...'
 puts '# so you need to manually edit a few things.'

@@ -1,4 +1,5 @@
 require 'flashsdk'
+require 'melomel/generators/as3_generator'
 require 'melomel/generators/air_generator'
 require 'melomel/generators/flex_generator'
 require 'melomel/module'

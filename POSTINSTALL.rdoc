@@ -1,10 +1,18 @@
 ++++++++++++++++++++++++++++++++
 You have successfully installed Project Sprouts support for Melomel!
 
-In your sprout project Gemfile:
+In your project Gemfile:
 
-  # Add the following:
+  # Add the following for Sprouts:
   gem 'sproutmelomel', '>= 0.6.7.pre'
+  
+  # for Melomel
+  gem 'rspec',  '~> 2.3.0'
+  gem 'cucumber',  '~> 0.8.5'
+  gem 'melomel',  '~> 0.6.1'
+  
+  # optionally for Flex/ActionScript projects
+  gem 'selenium-webdriver', '~> 0.1.1'
 
 Add the dependencies in your Rakefile
 
@@ -26,5 +34,11 @@ Include Melomel in your Application.mxml
   
   # Then include the bridge with:
   <m:Melomel/>
+  
+Or, for ActionScript 3 projects
+
+  # Somewhere in your root as3 file add
+  Melomel.stage = this.stage;
+  Melomel.connect();
 
 Enjoy.

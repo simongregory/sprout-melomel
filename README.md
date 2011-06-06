@@ -12,11 +12,27 @@ libraries to add support for [Melomel](http://melomel.info) in
     gem build sproutmelomel.gemspec 
     gem install sproutmelomel
     
-#### Or
+### Coming soon
 
     gem install sproutmelomel --pre
 
 ## Usage
+
+### Generators
+
+Add support to an existing project, from the directory containing the project run
+
+    melomel-flex MyProject
+
+Or
+    
+    melomel-air AirProject    
+
+You will then need to add the dependencies to your Gemfile, these will be
+output to your shell when you run the above (so it should be a simple copy
+and paste action).
+
+### SWC/Library management
 
 Edit your Gemfile to include
 
@@ -28,19 +44,7 @@ Edit your Rakefile to include
     
     # Within a (a)mxmlc block
     t.library_path << 'lib/melomel/melomel-0.6.7.swc'
-    
-Add support to an existing project
-
-    melomel-flex MyProject
-
-    # Or
-    
-    melomel-air AirProject    
-
-You will then need to add the dependencies to your Gemfile, these will be
-output to your shell when you run the above (so it should be a simple copy
-and paste action).
- 
+     
 ## MIT License
 
 Copyright (c) 2011 Simon Gregory
