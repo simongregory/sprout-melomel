@@ -4,7 +4,7 @@ You have successfully installed Project Sprouts support for Melomel!
 In your project Gemfile:
 
   # Add the following for Sprouts:
-  gem 'sproutmelomel', '>= 0.6.7.pre'
+  gem 'sprout-melomel', '>= 0.6.11.pre', :require => 'sproutmelomel'
   
   # for Melomel
   gem 'rspec',  '~> 2.3.0'
@@ -22,10 +22,10 @@ Add the dependencies in your Rakefile
 
   # Within a (a)mxmlc block,
   # reference the library in your debug/test build:
-  t.library_path << "lib/melomel/melomel-0.6.7.swc"
+  t.library_path << "lib/melomel/melomel-0.6.11.swc"
 
   # For your release build use the stub library:
-  t.library_path << "lib/melomel/melomel-stub-0.6.7.swc"
+  t.library_path << "lib/melomel/melomel-stub-0.6.11.swc"
 
 Include Melomel in your Application.mxml
 

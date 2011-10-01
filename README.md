@@ -36,14 +36,14 @@ and paste action).
 
 Edit your Gemfile to include
 
-    gem "sproutmelomel", ">= 0.6.7.pre"
+    gem "sprout-melomel", ">= 0.6.11.pre", :require => 'sproutmelomel'
 
 Edit your Rakefile to include 
 
     library :melomel, :swc
     
     # Within a (a)mxmlc block
-    t.library_path << 'lib/melomel/melomel-0.6.7.swc'
+    t.library_path << 'lib/melomel/melomel-0.6.11.swc'
      
 ## MIT License
 
