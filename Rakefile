@@ -1,8 +1,7 @@
 lib = File.expand_path('lib', File.dirname(__FILE__))
 $:.unshift lib unless $:.include?(lib)
 
-require 'rubygems'
-require 'bundler'
+require "bundler/gem_tasks"
 Bundler.require
 
 require 'rake/testtask'
@@ -34,17 +33,17 @@ task :release do
   puts ""
   print "Are you sure you want to relase Melomel Sprout #{Melomel::SPROUT_VERSION}? [y/N] "
   exit unless STDIN.gets.index(/y/i) == 0
-  
+
   unless `git branch` =~ /^\* master$/
     puts "You must be on the master branch to release!"
     exit!
   end
-  
+
   # Build gem and upload
   sh "gem build sproutmelomel.gemspec"
   sh "gem push sproutmelomel-#{Melomel::SPROUT_VERSION}.gem"
   sh "rm sproutmelomel-#{Melomel::SPROUT_VERSION}.gem"
-  
+
   # Commit
   sh "git commit --allow-empty -a -m 'v#{Melomel::SPROUT_VERSION}'"
   sh "git tag v#{Melomel::SPROUT_VERSION}"
