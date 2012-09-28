@@ -19,7 +19,7 @@ def start_runner
   @pid = fork do
     exec("#{ENV['FLEX_HOME']}/bin/adl #{test_runner_name}-app.xml")
   end
-  
+
   Process.detach(@pid)
 end
 

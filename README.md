@@ -2,7 +2,7 @@
 
 This [RubyGem](http://docs.rubygems.org/read/book/7) contains
 libraries to add support for [Melomel](http://melomel.info) in
-[Project Sprouts](http://projectsprouts.org).
+[Project Sprouts](http://projectsprouts.org). **It was never completed, but the generators may be useful**.
 
 ## Install
 
@@ -11,10 +11,6 @@ libraries to add support for [Melomel](http://melomel.info) in
     bundle install
     gem build sproutmelomel.gemspec
     gem install sproutmelomel
-
-### Coming soon
-
-    gem install sproutmelomel --pre
 
 ## Usage
 
@@ -26,7 +22,7 @@ Add support to an existing project, from the directory containing the project ru
 
 Or
     
-    melomel-air AirProject    
+    melomel-air AirProject
 
 You will then need to add the dependencies to your Gemfile, these will be
 output to your shell when you run the above (so it should be a simple copy

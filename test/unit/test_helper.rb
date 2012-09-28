@@ -18,4 +18,3 @@ require 'sprout'
 require 'sprout/test_helper'
 
 require 'sproutmelomel'
-
